@@ -1,0 +1,24 @@
+<h1>Add Animal</h1>
+<%= form_with(model: @animal, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :species %>
+    <%= f.text_field :species, required: true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age, required: true %>
+  </div>
+
+ 
+
+  
+  
+  
+  
+  <%= f.submit %>
+<% end %>

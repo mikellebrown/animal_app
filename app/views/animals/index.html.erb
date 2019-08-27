@@ -1,0 +1,38 @@
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+
+<%= link_to "Add Animal", new_animal_path %>
+<h3>Your Animals</h3>
+
+<ul>
+  <% @animals.each do |animal| %>
+    <li><%= animal.name %> - <%= animal.species %> - <%= animal.age %></li>
+     <%= button_to "Delete Animal", animal_path(animal), method: :delete %>
+     <%= button_to 'Edit Animal', edit_animal_path(animal) %>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
